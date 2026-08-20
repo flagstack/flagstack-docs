@@ -1,0 +1,56 @@
+name: Materialize Switch On Your Code rename
+
+on:
+  pull_request:
+    branches:
+      - agent/syoc-rename-helper
+
+permissions:
+  contents: write
+
+jobs:
+  rename:
+    if: github.head_ref == 'agent/syoc-rename-work'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: agent/syoc-rename-work
+          fetch-depth: 0
+      - name: Rename product
+        shell: bash
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+          root=Path('.'); trigger=Path('.syoc-rename-trigger')
+          def is_workflow(path): return len(path.parts)>=3 and path.parts[0]=='.github' and path.parts[1]=='workflows'
+          def humanize(text):
+              parts=re.split(r'(```[\s\S]*?```)',text)
+              for i in range(0,len(parts),2):
+                  inline=re.split(r'(`[^`\n]+`)',parts[i])
+                  for j in range(0,len(inline),2): inline[j]=re.sub(r'\bSwitchOnYourCode\b','Switch On Your Code',inline[j])
+                  parts[i]=''.join(inline)
+              return ''.join(parts)
+          bucket_map={'22683':'3837','91560':'35203','53181':'95458','17185':'50332','87178':'66174','35740':'59926','69539':'94257','82981':'14338','86769':'28947','91129':'90951','15580':'99275'}
+          for path in list(root.rglob('*')):
+              if not path.is_file() or '.git' in path.parts or path==trigger or is_workflow(path): continue
+              try: text=path.read_text(encoding='utf-8')
+              except UnicodeDecodeError: continue
+              original=text
+              text=text.replace('fs_server_','syoc_server_').replace('fs_client_','syoc_client_')
+              text=text.replace('FLAGSTACK','SWITCHONYOURCODE').replace('flagstack','switchonyourcode').replace('FlagStack','SwitchOnYourCode').replace('switchonyourcode.io','switchonyourcode.com')
+              for old,new in bucket_map.items(): text=text.replace(old,new)
+              if path.suffix.lower() in {'.md','.rst','.txt'} or path.name in {'LICENSE','NOTICE'}: text=humanize(text)
+              else: text=text.replace('"SwitchOnYourCode"','"Switch On Your Code"').replace("'SwitchOnYourCode'","'Switch On Your Code'")
+              if text!=original: path.write_text(text,encoding='utf-8')
+          if trigger.exists(): trigger.unlink()
+          PY
+      - name: Commit materialized tree
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "chore: Materialize Switch On Your Code rename."
+          git push origin HEAD:agent/syoc-rename-work
