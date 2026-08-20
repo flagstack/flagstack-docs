@@ -1,0 +1,124 @@
+[project]
+site_name = "FlagStack Documentation"
+site_description = "Documentation for the FlagStack feature management platform and official SDKs."
+site_author = "FlagStack"
+copyright = "Copyright &copy; 2026 FlagStack contributors"
+repo_url = "https://github.com/flagstack/flagstack-docs"
+repo_name = "flagstack/flagstack-docs"
+edit_uri = "edit/main/docs/"
+strict = true
+extra_css = ["stylesheets/extra.css"]
+nav = [
+  { "Home" = "index.md" },
+  { "Getting started" = [
+    { "Overview" = "getting-started/index.md" },
+    { "Self-host with Docker" = "getting-started/self-host.md" },
+    { "First-run setup" = "getting-started/first-run.md" },
+    { "Create your first flag" = "getting-started/first-flag.md" },
+    { "Connect an SDK" = "getting-started/connect-sdk.md" },
+  ] },
+  { "Concepts" = [
+    { "Organisations, projects and environments" = "concepts/hierarchy.md" },
+    { "Feature flags and values" = "concepts/flags.md" },
+    { "Evaluation context" = "concepts/context.md" },
+    { "Targeting rules" = "concepts/targeting.md" },
+    { "Segments" = "concepts/segments.md" },
+    { "Variants and percentage rollout" = "concepts/rollouts.md" },
+    { "Scheduling" = "concepts/scheduling.md" },
+    { "Client-visible flags" = "concepts/client-visible.md" },
+    { "Local evaluation and freshness" = "concepts/local-evaluation.md" },
+  ] },
+  { "SDKs" = [
+    { "Overview" = "sdks/index.md" },
+    { "JavaScript / TypeScript" = "sdks/javascript.md" },
+    { "React" = "sdks/react.md" },
+    { "Next.js" = "sdks/nextjs.md" },
+    { "Python" = "sdks/python.md" },
+    { "Go" = "sdks/go.md" },
+    { ".NET" = "sdks/dotnet.md" },
+    { "OpenFeature" = "sdks/openfeature.md" },
+  ] },
+  { "Operations" = [
+    { "Self-hosting" = "operations/self-hosting.md" },
+    { "Configuration" = "operations/configuration.md" },
+    { "Reverse proxy and TLS" = "operations/reverse-proxy.md" },
+    { "Health checks" = "operations/health-checks.md" },
+    { "Backups and recovery" = "operations/backups.md" },
+    { "Upgrades" = "operations/upgrades.md" },
+  ] },
+  { "Security" = [
+    { "Authentication and roles" = "security/authentication.md" },
+    { "SDK credentials" = "security/sdk-credentials.md" },
+    { "Browser/client exposure" = "security/client-exposure.md" },
+    { "Targeting data and privacy" = "security/privacy.md" },
+  ] },
+  { "Reference" = [
+    { "Evaluation contract" = "reference/evaluation.md" },
+    { "SDK configuration delivery" = "reference/sdk-delivery.md" },
+    { "Architecture" = "reference/architecture.md" },
+    { "Data model" = "reference/data-model.md" },
+    { "Glossary" = "reference/glossary.md" },
+    { "Repositories" = "reference/repositories.md" },
+  ] },
+  { "Contributing" = [
+    { "Documentation development" = "development/docs.md" },
+    { "Core development" = "development/core.md" },
+  ] },
+]
+
+[project.theme]
+language = "en"
+features = [
+  "content.action.edit",
+  "content.code.copy",
+  "content.code.select",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.path",
+  "navigation.sections",
+  "navigation.top",
+  "search.highlight",
+  "toc.follow",
+]
+icon.logo = "lucide/flag"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+toc.permalink = true
+pymdownx.betterem = {}
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.magiclink = {}
+pymdownx.mark = {}
+pymdownx.superfences = {}
+pymdownx.tabbed.alternate_style = true
+pymdownx.tasklist.custom_checkbox = true
+pymdownx.tilde = {}
