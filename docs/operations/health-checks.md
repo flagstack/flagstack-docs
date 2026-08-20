@@ -1,6 +1,6 @@
 # Health checks
 
-FlagStack exposes separate liveness and readiness endpoints.
+Switch On Your Code exposes separate liveness and readiness endpoints.
 
 | Endpoint | Meaning |
 | --- | --- |
@@ -10,4 +10,4 @@ FlagStack exposes separate liveness and readiness endpoints.
 
 Use `/readyz` when deciding whether a replica should receive traffic. A running process with an unavailable database should not be considered ready.
 
-The self-hosted CI smoke test boots a clean PostgreSQL 18 instance, runs migrations, starts FlagStack, waits for `/readyz`, and verifies that the compiled dashboard is served from the application container.
+The self-hosted CI smoke test boots a clean PostgreSQL 18 instance, runs migrations, starts Switch On Your Code, waits for `/readyz`, and verifies that the compiled dashboard is served from the application container.

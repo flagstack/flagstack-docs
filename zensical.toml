@@ -1,10 +1,10 @@
 [project]
-site_name = "FlagStack Documentation"
-site_description = "Documentation for the FlagStack feature management platform and official SDKs."
-site_author = "FlagStack"
-copyright = "Copyright &copy; 2026 FlagStack contributors"
-repo_url = "https://github.com/flagstack/flagstack-docs"
-repo_name = "flagstack/flagstack-docs"
+site_name = "SwitchOnYourCode Documentation"
+site_description = "Documentation for the SwitchOnYourCode feature management platform and official SDKs."
+site_author = "Switch On Your Code"
+copyright = "Copyright &copy; 2026 SwitchOnYourCode contributors"
+repo_url = "https://github.com/switchonyourcode/switchonyourcode-docs"
+repo_name = "switchonyourcode/switchonyourcode-docs"
 edit_uri = "edit/main/docs/"
 strict = true
 extra_css = ["stylesheets/extra.css"]

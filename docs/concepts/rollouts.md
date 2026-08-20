@@ -1,6 +1,6 @@
 # Variants and percentage rollout
 
-FlagStack assigns rollout cohorts deterministically so the same subject receives the same variant across repeated evaluations.
+Switch On Your Code assigns rollout cohorts deterministically so the same subject receives the same variant across repeated evaluations.
 
 ## Percentage precision
 
@@ -21,7 +21,7 @@ Weights must total exactly `100000`.
 
 ## Stable assignment
 
-By default, percentage assignment uses `targetingKey`. FlagStack hashes the environment ID, flag ID and targeting key with SHA-256, then maps the result into one of the 100,000 buckets.
+By default, percentage assignment uses `targetingKey`. Switch On Your Code hashes the environment ID, flag ID and targeting key with SHA-256, then maps the result into one of the 100,000 buckets.
 
 Because the assignment is stable, increasing a rollout from 10% to 25% keeps the original 10% cohort and adds more subjects instead of reshuffling everyone.
 
@@ -45,4 +45,4 @@ Weighted assignment works with named variants too:
 }
 ```
 
-This supports deterministic A/B or multivariate delivery. FlagStack does **not** currently provide experiment conversion analytics, statistical significance or winner selection.
+This supports deterministic A/B or multivariate delivery. Switch On Your Code does **not** currently provide experiment conversion analytics, statistical significance or winner selection.

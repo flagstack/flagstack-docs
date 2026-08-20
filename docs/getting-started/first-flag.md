@@ -1,10 +1,10 @@
 # Create your first flag
 
-FlagStack defines feature flags at **project scope** and stores enablement/targeting policy separately for each environment.
+Switch On Your Code defines feature flags at **project scope** and stores enablement/targeting policy separately for each environment.
 
 ## 1. Create a project
 
-A project represents an application, service or other deployable unit that will consume FlagStack flags.
+A project represents an application, service or other deployable unit that will consume Switch On Your Code flags.
 
 Use a stable project key that describes the application rather than an environment, for example `checkout-service` or `customer-portal`.
 

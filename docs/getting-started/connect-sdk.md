@@ -9,10 +9,10 @@ Use a **server SDK credential** for trusted backend code, workers, CLIs and serv
 Server keys look like:
 
 ```text
-fs_server_<credential-id>.<secret>
+syoc_server_<credential-id>.<secret>
 ```
 
-The complete key is shown only once. Store it in a secret manager or environment variable such as `FLAGSTACK_SDK_KEY`.
+The complete key is shown only once. Store it in a secret manager or environment variable such as `SWITCHONYOURCODE_SDK_KEY`.
 
 Server credentials receive all active flags in their environment.
 
@@ -23,7 +23,7 @@ Use a **client SDK credential** for browser code or any runtime where users can 
 Client keys look like:
 
 ```text
-fs_client_<public-id>
+syoc_client_<public-id>
 ```
 
 Client keys are intentionally public. They receive only flags marked **client visible**.

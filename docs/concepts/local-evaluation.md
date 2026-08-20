@@ -1,6 +1,6 @@
 # Local evaluation and configuration freshness
 
-Official FlagStack SDKs evaluate flags locally from a validated environment configuration snapshot.
+Official Switch On Your Code SDKs evaluate flags locally from a validated environment configuration snapshot.
 
 ## Configuration flow
 
@@ -18,7 +18,7 @@ Polling is the reliability baseline. Official SDKs expose polling controls appro
 
 ## Realtime invalidation
 
-FlagStack core also exposes an authenticated Server-Sent Events stream at `/sdk/v1/events`. It sends invalidations rather than the configuration itself; the client then performs the same conditional `/sdk/v1/config` refresh.
+Switch On Your Code core also exposes an authenticated Server-Sent Events stream at `/sdk/v1/events`. It sends invalidations rather than the configuration itself; the client then performs the same conditional `/sdk/v1/config` refresh.
 
 !!! info "Current SDK status"
     The core realtime endpoint is implemented, but the current official SDK release candidates still rely on polling for freshness. Realtime stream consumption will be added to the SDK clients without changing evaluation semantics or the configuration wire format.

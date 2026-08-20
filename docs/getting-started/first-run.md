@@ -1,6 +1,6 @@
 # First-run setup
 
-A new FlagStack database contains no user accounts. The dashboard detects this state and presents the bootstrap flow.
+A new Switch On Your Code database contains no user accounts. The dashboard detects this state and presents the bootstrap flow.
 
 The first-run transaction creates:
 
@@ -14,7 +14,7 @@ The operation is transaction-safe and protected against concurrent bootstrap req
 
 ## Password requirements
 
-Local passwords must be at least 12 characters. FlagStack stores local passwords using Argon2id and stores only hashed browser session tokens in PostgreSQL.
+Local passwords must be at least 12 characters. Switch On Your Code stores local passwords using Argon2id and stores only hashed browser session tokens in PostgreSQL.
 
 ## After setup
 

@@ -1,11 +1,11 @@
 # Reverse proxy and TLS
 
-Put internet-facing FlagStack deployments behind a TLS-terminating reverse proxy, ingress controller or load balancer.
+Put internet-facing Switch On Your Code deployments behind a TLS-terminating reverse proxy, ingress controller or load balancer.
 
 Set:
 
 ```text
-FLAGSTACK_SESSION_COOKIE_SECURE=true
+SWITCHONYOURCODE_SESSION_COOKIE_SECURE=true
 ```
 
 ## Paths
@@ -22,4 +22,4 @@ Your proxy should:
 - pass `Authorization`, `If-None-Match` and ordinary cache headers through unchanged;
 - use idle/read timeouts long enough for persistent event streams.
 
-FlagStack sends periodic SSE comment heartbeats to help intermediaries keep otherwise-idle streams open.
+Switch On Your Code sends periodic SSE comment heartbeats to help intermediaries keep otherwise-idle streams open.
