@@ -19,7 +19,7 @@ PostgreSQL readiness
         ↓
 one-shot database migration
         ↓
-SwitchOnYourCode application
+Switch On Your Code application
 ```
 
 The application never mutates the database schema automatically at API startup.
