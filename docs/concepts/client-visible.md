@@ -1,6 +1,6 @@
 # Client-visible flags
 
-Browser and other public clients cannot safely hold a secret. FlagStack therefore separates **server credentials** from deliberately-public **client credentials**.
+Browser and other public clients cannot safely hold a secret. Switch On Your Code therefore separates **server credentials** from deliberately-public **client credentials**.
 
 Client credentials receive only flags marked `client_visible`.
 

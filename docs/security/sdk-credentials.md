@@ -7,10 +7,10 @@ SDK credentials are scoped to one environment and are separate from dashboard us
 Server keys contain a high-entropy secret:
 
 ```text
-fs_server_<credential-id>.<secret>
+syoc_server_<credential-id>.<secret>
 ```
 
-The random secret contains 256 bits of entropy. FlagStack shows the complete key only when it is created and stores only a SHA-256 digest of the secret portion.
+The random secret contains 256 bits of entropy. Switch On Your Code shows the complete key only when it is created and stores only a SHA-256 digest of the secret portion.
 
 Treat a server key like any production secret:
 
@@ -24,7 +24,7 @@ Treat a server key like any production secret:
 Client keys are deliberately public identifiers:
 
 ```text
-fs_client_<public-id>
+syoc_client_<public-id>
 ```
 
 They are suitable for browser/public runtimes only because the server filters delivery to client-visible flags.

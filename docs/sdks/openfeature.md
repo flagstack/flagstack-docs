@@ -1,19 +1,19 @@
 # OpenFeature
 
-FlagStack's evaluation model and resolution metadata are designed to map cleanly onto [OpenFeature](https://openfeature.dev/). Official provider integrations are implemented for JavaScript/TypeScript, Python, Go and .NET.
+Switch On Your Code's evaluation model and resolution metadata are designed to map cleanly onto [OpenFeature](https://openfeature.dev/). Official provider integrations are implemented for JavaScript/TypeScript, Python, Go and .NET.
 
-OpenFeature is useful when you want application code to depend on a vendor-neutral feature-flag API while keeping FlagStack as the provider.
+OpenFeature is useful when you want application code to depend on a vendor-neutral feature-flag API while keeping Switch On Your Code as the provider.
 
 ## JavaScript server provider
 
 ```ts
 import { OpenFeature } from '@openfeature/server-sdk'
-import { FlagStackServerProvider } from '@flagstack/openfeature/server'
+import { SwitchOnYourCodeServerProvider } from '@switchonyourcode/openfeature/server'
 
 await OpenFeature.setProviderAndWait(
-  new FlagStackServerProvider({
+  new SwitchOnYourCodeServerProvider({
     baseUrl: 'https://flags.example.com',
-    serverKey: process.env.FLAGSTACK_SDK_KEY!,
+    serverKey: process.env.SWITCHONYOURCODE_SDK_KEY!,
     autoPoll: true,
   }),
 )
@@ -25,19 +25,19 @@ const enabled = await client.getBooleanValue('new-checkout', false, {
 })
 ```
 
-Browser applications use `FlagStackClientProvider` from `@flagstack/openfeature/client` with a public client key.
+Browser applications use `SwitchOnYourCodeClientProvider` from `@switchonyourcode/openfeature/client` with a public client key.
 
 ## Python
 
 ```python
 from openfeature import api
 from openfeature.evaluation_context import EvaluationContext
-from flagstack.openfeature import FlagStackProvider
+from switchonyourcode.openfeature import SwitchOnYourCodeProvider
 
 api.set_provider_and_wait(
-    FlagStackProvider(
+    SwitchOnYourCodeProvider(
         base_url="https://flags.example.com",
-        server_key="fs_server_...",
+        server_key="syoc_server_...",
     )
 )
 
@@ -51,14 +51,14 @@ enabled = client.get_boolean_value(
 
 ## Go
 
-Use `github.com/flagstack/sdk-go/openfeature` with the OpenFeature Go SDK. The provider supports provider lifecycle, context conversion, resolution details and configuration-change events.
+Use `github.com/switchonyourcode/sdk-go/openfeature` with the OpenFeature Go SDK. The provider supports provider lifecycle, context conversion, resolution details and configuration-change events.
 
 ## .NET
 
-Use the `FlagStack.OpenFeature` package and register `FlagStackProvider` with `OpenFeature.Api.Instance`.
+Use the `SwitchOnYourCode.OpenFeature` package and register `SwitchOnYourCodeProvider` with `OpenFeature.Api.Instance`.
 
 ## Metadata mapping
 
-Providers preserve FlagStack's variant/reason/error information and expose relevant metadata such as environment identity, flag revision, enabled state and matched rule ID.
+Providers preserve Switch On Your Code's variant/reason/error information and expose relevant metadata such as environment identity, flag revision, enabled state and matched rule ID.
 
-Date/time context values are normalized deterministically per runtime before they enter FlagStack targeting.
+Date/time context values are normalized deterministically per runtime before they enter Switch On Your Code targeting.

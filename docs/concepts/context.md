@@ -1,6 +1,6 @@
 # Evaluation context
 
-Evaluation context is application-owned data supplied to the SDK at evaluation time. FlagStack does not need a synchronized copy of your user database.
+Evaluation context is application-owned data supplied to the SDK at evaluation time. Switch On Your Code does not need a synchronized copy of your user database.
 
 A context can look like:
 
@@ -44,6 +44,6 @@ account.subscription.plan
 
 ## Data minimisation
 
-Only send attributes required for evaluation. FlagStack's local evaluator does not require names or email addresses unless your own targeting policy explicitly uses them.
+Only send attributes required for evaluation. Switch On Your Code's local evaluator does not require names or email addresses unless your own targeting policy explicitly uses them.
 
 See [Targeting data and privacy](../security/privacy.md).

@@ -1,15 +1,15 @@
 # SDK overview
 
-Official SDKs implement the same schema-v1 evaluation contract in each supported language. They fetch configuration from FlagStack, retain the last valid snapshot, and evaluate flags locally.
+Official SDKs implement the same schema-v1 evaluation contract in each supported language. They fetch configuration from Switch On Your Code, retain the last valid snapshot, and evaluate flags locally.
 
 ## Official SDKs
 
 | Ecosystem | Repository | Primary use |
 | --- | --- | --- |
-| JavaScript / TypeScript | [`flagstack/sdk-js`](https://github.com/flagstack/sdk-js) | Browser, Node.js, React and Next.js. |
-| Python | [`flagstack/sdk-python`](https://github.com/flagstack/sdk-python) | Python services, Django, FastAPI, workers and CLIs. |
-| Go | [`flagstack/sdk-go`](https://github.com/flagstack/sdk-go) | Go services, workers and CLIs. |
-| .NET | [`flagstack/sdk-dotnet`](https://github.com/flagstack/sdk-dotnet) | .NET services, ASP.NET Core and Generic Host applications. |
+| JavaScript / TypeScript | [`switchonyourcode/sdk-js`](https://github.com/switchonyourcode/sdk-js) | Browser, Node.js, React and Next.js. |
+| Python | [`switchonyourcode/sdk-python`](https://github.com/switchonyourcode/sdk-python) | Python services, Django, FastAPI, workers and CLIs. |
+| Go | [`switchonyourcode/sdk-go`](https://github.com/switchonyourcode/sdk-go) | Go services, workers and CLIs. |
+| .NET | [`switchonyourcode/sdk-dotnet`](https://github.com/switchonyourcode/sdk-dotnet) | .NET services, ASP.NET Core and Generic Host applications. |
 
 All official SDK repositories use the Apache License 2.0.
 
@@ -18,9 +18,9 @@ All official SDK repositories use the Apache License 2.0.
 
 ## Server vs client credentials
 
-Use `fs_server_...` credentials only in trusted code. They receive all active flags for one environment.
+Use `syoc_server_...` credentials only in trusted code. They receive all active flags for one environment.
 
-Use `fs_client_...` credentials in browser/public code. They are public identifiers and receive only client-visible flags.
+Use `syoc_client_...` credentials in browser/public code. They are public identifiers and receive only client-visible flags.
 
 ## Evaluation context
 

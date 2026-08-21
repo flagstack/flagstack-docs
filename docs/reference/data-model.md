@@ -33,4 +33,4 @@ Users, local credentials and sessions are separate records. Organisation members
 
 Core entities use UUIDv7, including PostgreSQL 18 `uuidv7()` defaults for database-created rows.
 
-For schema-level detail, see the [core data model document](https://github.com/flagstack/flagstack/blob/main/docs/data-model.md).
+For schema-level detail, see the [core data model document](https://github.com/switchonyourcode/switchonyourcode/blob/main/docs/data-model.md).

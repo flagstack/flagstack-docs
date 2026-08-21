@@ -27,7 +27,7 @@ Example:
 
 ## Operators
 
-FlagStack's v1 evaluation contract includes:
+Switch On Your Code's v1 evaluation contract includes:
 
 - equality: `equals`, `not_equals`;
 - membership: `in`, `not_in`;
@@ -46,4 +46,4 @@ Regex rules use a portable RE2-compatible subset shared by every official SDK. L
 
 ## Semantic versions
 
-Semantic-version comparisons follow FlagStack's Go reference semantics and accept shorthand such as `2` and `2.4` (equivalent to `2.0.0` and `2.4.0`).
+Semantic-version comparisons follow Switch On Your Code's Go reference semantics and accept shorthand such as `2` and `2.4` (equivalent to `2.0.0` and `2.4.0`).

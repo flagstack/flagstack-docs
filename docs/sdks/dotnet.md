@@ -1,6 +1,6 @@
 # .NET SDK
 
-Repository: [`flagstack/sdk-dotnet`](https://github.com/flagstack/sdk-dotnet)
+Repository: [`switchonyourcode/sdk-dotnet`](https://github.com/switchonyourcode/sdk-dotnet)
 
 Supported targets: .NET 8 and .NET 10.
 
@@ -8,9 +8,9 @@ The repository contains three NuGet-ready packages:
 
 | Package | Purpose |
 | --- | --- |
-| `FlagStack` | Dependency-light native client and evaluator. |
-| `FlagStack.Extensions.DependencyInjection` | ASP.NET Core / Generic Host integration. |
-| `FlagStack.OpenFeature` | OpenFeature provider. |
+| `SwitchOnYourCode` | Dependency-light native client and evaluator. |
+| `SwitchOnYourCode.Extensions.DependencyInjection` | ASP.NET Core / Generic Host integration. |
+| `SwitchOnYourCode.OpenFeature` | OpenFeature provider. |
 
 !!! warning "Not yet published"
     The NuGet packages are implemented but not yet released. The APIs below are pre-release.
@@ -18,12 +18,12 @@ The repository contains three NuGet-ready packages:
 ## Native client
 
 ```csharp
-using FlagStack;
+using SwitchOnYourCode;
 
-await using var flags = await FlagStackClient.CreateAndWaitAsync(new FlagStackClientOptions
+await using var flags = await SwitchOnYourCodeClient.CreateAndWaitAsync(new SwitchOnYourCodeClientOptions
 {
     BaseUrl = "https://flags.example.com",
-    ServerKey = "fs_server_...",
+    ServerKey = "syoc_server_...",
 });
 
 var enabled = flags.GetBooleanValue(
@@ -41,17 +41,17 @@ var enabled = flags.GetBooleanValue(
 ## ASP.NET Core / Generic Host
 
 ```csharp
-using FlagStack.Extensions.DependencyInjection;
+using SwitchOnYourCode.Extensions.DependencyInjection;
 
-builder.Services.AddFlagStack(options =>
+builder.Services.AddSwitchOnYourCode(options =>
 {
     options.BaseUrl = "https://flags.example.com";
-    options.ServerKey = builder.Configuration["FlagStack:ServerKey"]!;
+    options.ServerKey = builder.Configuration["SwitchOnYourCode:ServerKey"]!;
     options.PollInterval = TimeSpan.FromSeconds(30);
 });
 ```
 
-`FlagStackClient` is registered as a singleton. The hosted service performs the initial load and polls in the background by default.
+`SwitchOnYourCodeClient` is registered as a singleton. The hosted service performs the initial load and polls in the background by default.
 
 ## Typed APIs
 

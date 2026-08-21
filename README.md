@@ -1,6 +1,6 @@
-# FlagStack Documentation
+# Switch On Your Code Documentation
 
-Official documentation for [FlagStack](https://github.com/flagstack/flagstack), built with [Zensical](https://zensical.org/).
+Official documentation for [Switch On Your Code](https://github.com/switchonyourcode/switchonyourcode), built with [Zensical](https://zensical.org/).
 
 The documentation covers self-hosting, concepts, targeting and rollout semantics, the official JavaScript/TypeScript, Python, Go and .NET SDKs, OpenFeature integration, security, operations and reference material.
 
@@ -23,8 +23,8 @@ Zensical 0.0.53 is pinned in `requirements.txt` so CI and contributors build wit
 
 ## Source of truth
 
-User-facing documentation lives in this repository. Normative SDK wire schemas, cross-language evaluation vectors and the Go reference evaluator live in [`flagstack/flagstack`](https://github.com/flagstack/flagstack).
+User-facing documentation lives in this repository. Normative SDK wire schemas, cross-language evaluation vectors and the Go reference evaluator live in [`switchonyourcode/switchonyourcode`](https://github.com/switchonyourcode/switchonyourcode).
 
 ## Contributing
 
-Documentation changes use feature branches and pull requests. FlagStack uses a linear Git history and integrates pull requests by rebase only; organisation-wide contribution and CLA guidance lives in [`flagstack/.github`](https://github.com/flagstack/.github).
+Documentation changes use feature branches and pull requests. Switch On Your Code uses a linear Git history and integrates pull requests by rebase only; organisation-wide contribution and CLA guidance lives in [`switchonyourcode/.github`](https://github.com/switchonyourcode/.github).
