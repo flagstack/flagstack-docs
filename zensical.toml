@@ -1,8 +1,8 @@
 [project]
-site_name = "SwitchOnYourCode Documentation"
-site_description = "Documentation for the SwitchOnYourCode feature management platform and official SDKs."
+site_name = "Switch On Your Code Documentation"
+site_description = "Documentation for the Switch On Your Code feature management platform and official SDKs."
 site_author = "Switch On Your Code"
-copyright = "Copyright &copy; 2026 SwitchOnYourCode contributors"
+copyright = "Copyright &copy; 2026 Switch On Your Code contributors"
 repo_url = "https://github.com/switchonyourcode/switchonyourcode-docs"
 repo_name = "switchonyourcode/switchonyourcode-docs"
 edit_uri = "edit/main/docs/"
@@ -83,7 +83,7 @@ features = [
   "search.highlight",
   "toc.follow",
 ]
-icon.logo = "lucide/flag"
+icon.logo = "lucide/toggle-right"
 
 [[project.theme.palette]]
 media = "(prefers-color-scheme)"
