@@ -1,6 +1,6 @@
 # Feature flags and values
 
-FlagStack currently supports four flag kinds:
+Switch On Your Code currently supports four flag kinds:
 
 | Kind | Typical use |
 | --- | --- |

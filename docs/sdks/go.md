@@ -1,6 +1,6 @@
 # Go SDK
 
-Repository: [`flagstack/sdk-go`](https://github.com/flagstack/sdk-go)
+Repository: [`switchonyourcode/sdk-go`](https://github.com/switchonyourcode/sdk-go)
 
 Requirements: Go 1.25 or newer and an environment-scoped server SDK key.
 
@@ -15,20 +15,20 @@ import (
     "context"
     "log"
 
-    flagstack "github.com/flagstack/sdk-go"
+    switchonyourcode "github.com/switchonyourcode/sdk-go"
 )
 
 func main() {
-    flags, err := flagstack.NewClientAndWait(context.Background(), flagstack.ClientOptions{
+    flags, err := switchonyourcode.NewClientAndWait(context.Background(), switchonyourcode.ClientOptions{
         BaseURL:   "https://flags.example.com",
-        ServerKey: "fs_server_...",
+        ServerKey: "syoc_server_...",
     })
     if err != nil {
         log.Fatal(err)
     }
     defer flags.Close()
 
-    enabled := flags.Boolean("new-checkout", false, flagstack.EvaluationContext{
+    enabled := flags.Boolean("new-checkout", false, switchonyourcode.EvaluationContext{
         TargetingKey: "user-123",
         Attributes: map[string]any{"plan": "enterprise"},
     })
@@ -58,4 +58,4 @@ The native client exposes `Boolean`, `String`, `Number`, `JSON` and correspondin
 
 ## OpenFeature
 
-The `github.com/flagstack/sdk-go/openfeature` subpackage implements the OpenFeature Go provider. See [OpenFeature](openfeature.md).
+The `github.com/switchonyourcode/sdk-go/openfeature` subpackage implements the OpenFeature Go provider. See [OpenFeature](openfeature.md).

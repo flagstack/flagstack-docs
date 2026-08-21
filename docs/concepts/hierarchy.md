@@ -1,6 +1,6 @@
 # Organisations, projects and environments
 
-FlagStack's tenancy hierarchy is:
+Switch On Your Code's tenancy hierarchy is:
 
 ```text
 Organisation
@@ -16,7 +16,7 @@ An organisation is the top-level tenancy and permission boundary. Users belong t
 
 ## Projects
 
-A project represents one application or service integrating with FlagStack. Feature-flag definitions and reusable segments are project-scoped.
+A project represents one application or service integrating with Switch On Your Code. Feature-flag definitions and reusable segments are project-scoped.
 
 A user can work with multiple projects in the same organisation, and a future user/account model can support membership in multiple organisations.
 

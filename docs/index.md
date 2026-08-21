@@ -1,15 +1,15 @@
-# FlagStack documentation
+# Switch On Your Code documentation
 
-FlagStack is a source-available, self-hostable feature management platform with local SDK evaluation, deterministic targeting and rollouts, realtime configuration invalidation, and OpenFeature support.
+Switch On Your Code is a source-available, self-hostable feature management platform with local SDK evaluation, deterministic targeting and rollouts, realtime configuration invalidation, and OpenFeature support.
 
 !!! warning "Early development"
-    FlagStack is still in early development and is **not yet recommended for production use**. The official SDK APIs are being validated and most language packages have not yet been published to their public package registries.
+    Switch On Your Code is still in early development and is **not yet recommended for production use**. The official SDK APIs are being validated and most language packages have not yet been published to their public package registries.
 
 ## Start here
 
 <div class="grid cards" markdown>
 
--   **Self-host FlagStack**
+-   **Self-host Switch On Your Code**
 
     ---
 
@@ -43,9 +43,9 @@ FlagStack is a source-available, self-hostable feature management platform with 
 
 </div>
 
-## What FlagStack does
+## What Switch On Your Code does
 
-FlagStack separates **feature-management decisions** from application deployments. Your application downloads an environment-scoped configuration document, validates and caches it, then evaluates flags locally without a network request for each decision.
+Switch On Your Code separates **feature-management decisions** from application deployments. Your application downloads an environment-scoped configuration document, validates and caches it, then evaluates flags locally without a network request for each decision.
 
 The initial platform supports:
 
@@ -64,10 +64,10 @@ The initial platform supports:
 
 ## Core design principle
 
-Flag evaluation stays in the SDK. If the FlagStack control plane is temporarily unavailable after an SDK has loaded a valid configuration, applications continue to evaluate against their last known-good snapshot.
+Flag evaluation stays in the SDK. If the Switch On Your Code control plane is temporarily unavailable after an SDK has loaded a valid configuration, applications continue to evaluate against their last known-good snapshot.
 
-That makes FlagStack part of the **control path**, not the hot request path of your application.
+That makes Switch On Your Code part of the **control path**, not the hot request path of your application.
 
 ## Source and licences
 
-The [FlagStack core repository](https://github.com/flagstack/flagstack) is licensed under the Elastic License 2.0. Official SDK repositories use the Apache License 2.0. Refer to each repository's `LICENSE` file for authoritative terms.
+The [Switch On Your Code core repository](https://github.com/switchonyourcode/switchonyourcode) is licensed under the Elastic License 2.0. Official SDK repositories use the Apache License 2.0. Refer to each repository's `LICENSE` file for authoritative terms.

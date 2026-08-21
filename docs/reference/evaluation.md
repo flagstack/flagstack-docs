@@ -1,8 +1,8 @@
 # Evaluation contract
 
-The normative v1 evaluator is defined by FlagStack core and reproduced by every official SDK.
+The normative v1 evaluator is defined by Switch On Your Code core and reproduced by every official SDK.
 
-This reference summarizes the contract; the authoritative implementation/specification lives in the [core repository](https://github.com/flagstack/flagstack/tree/main/spec) and its [evaluation design document](https://github.com/flagstack/flagstack/blob/main/docs/evaluation.md).
+This reference summarizes the contract; the authoritative implementation/specification lives in the [core repository](https://github.com/switchonyourcode/switchonyourcode/tree/main/spec) and its [evaluation design document](https://github.com/switchonyourcode/switchonyourcode/blob/main/docs/evaluation.md).
 
 ## Evaluation order
 
@@ -29,7 +29,7 @@ Reasons include `STATIC`, `DEFAULT`, `TARGETING_MATCH`, `SPLIT`, `DISABLED` and 
 The v1 algorithm uses 100,000 buckets:
 
 ```text
-input = "flagstack-v1" + NUL + environment_id + NUL + flag_id + NUL + bucket_value
+input = "switchonyourcode-v1" + NUL + environment_id + NUL + flag_id + NUL + bucket_value
 hash = SHA-256(input UTF-8 bytes)
 bucket = big-endian uint32(hash[0:4]) mod 100000
 ```
@@ -40,7 +40,7 @@ Reference vector:
 environment_id = env-1
 flag_id        = flag-1
 bucket_value   = user-123
-bucket         = 22683
+bucket         = 3837
 ```
 
 For a custom scalar `bucket_by` attribute, `bucket_value` is the exact cross-language representation pinned by the core compatibility vectors. `targetingKey` itself is hashed directly as a string without JSON quotes.

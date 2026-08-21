@@ -5,8 +5,8 @@ The documentation site is built with [Zensical](https://zensical.org/) and plain
 ## Local setup
 
 ```bash
-git clone https://github.com/flagstack/flagstack-docs.git
-cd flagstack-docs
+git clone https://github.com/switchonyourcode/switchonyourcode-docs.git
+cd switchonyourcode-docs
 python -m venv .venv
 . .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -28,6 +28,6 @@ The site configuration enables Zensical strict mode, so validation warnings such
 
 ## Source of truth
 
-User-facing guidance belongs here. Normative wire schemas, compatibility vectors and the reference evaluator remain in `flagstack/flagstack` so SDK implementations and docs cannot independently redefine evaluation semantics.
+User-facing guidance belongs here. Normative wire schemas, compatibility vectors and the reference evaluator remain in `switchonyourcode/switchonyourcode` so SDK implementations and docs cannot independently redefine evaluation semantics.
 
 When changing an SDK API, update that SDK's README/tests first and then update the corresponding docs page.

@@ -1,6 +1,6 @@
 # Architecture
 
-FlagStack core is a modular monolith optimized for straightforward self-hosting.
+Switch On Your Code core is a modular monolith optimized for straightforward self-hosting.
 
 ## Components
 
@@ -33,4 +33,4 @@ SDKs download a versioned configuration document, evaluate locally, and revalida
 
 Every API replica can run the scheduler loop. Due work is claimed atomically with a lease/token so multiple replicas do not intentionally execute the same scheduled change.
 
-For implementation-level detail, see the [core architecture document](https://github.com/flagstack/flagstack/blob/main/docs/architecture.md).
+For implementation-level detail, see the [core architecture document](https://github.com/switchonyourcode/switchonyourcode/blob/main/docs/architecture.md).

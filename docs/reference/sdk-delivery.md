@@ -7,7 +7,7 @@ GET /sdk/v1/config
 Authorization: Bearer <sdk-key>
 ```
 
-The authoritative wire contract and JSON Schema live in the [FlagStack core `spec/` directory](https://github.com/flagstack/flagstack/tree/main/spec).
+The authoritative wire contract and JSON Schema live in the [Switch On Your Code core `spec/` directory](https://github.com/switchonyourcode/switchonyourcode/tree/main/spec).
 
 ## Cache validation
 
@@ -40,6 +40,6 @@ Accept: text/event-stream
 
 The stream sends `ready`, `configuration_changed` and credential-revocation information. A configuration-change event contains no flag payload; the SDK refreshes `/sdk/v1/config` with its current ETag.
 
-Changes propagate between FlagStack replicas through PostgreSQL `LISTEN`/`NOTIFY`, with database triggers publishing only after the underlying transaction commits.
+Changes propagate between Switch On Your Code replicas through PostgreSQL `LISTEN`/`NOTIFY`, with database triggers publishing only after the underlying transaction commits.
 
 Polling remains the reliability fallback even when realtime stream consumption is enabled.

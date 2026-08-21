@@ -1,6 +1,6 @@
 # Authentication and roles
 
-FlagStack core currently provides local password authentication suitable for self-hosting.
+Switch On Your Code core currently provides local password authentication suitable for self-hosting.
 
 ## Password storage
 

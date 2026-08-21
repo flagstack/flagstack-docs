@@ -1,6 +1,6 @@
 # Scheduling
 
-FlagStack can persist future environment changes instead of requiring an external cron job to call the API.
+Switch On Your Code can persist future environment changes instead of requiring an external cron job to call the API.
 
 A scheduled change can modify:
 
@@ -23,6 +23,6 @@ This deliberately reuses the ordinary deterministic rollout model rather than cr
 
 ## Reliability
 
-Due work is claimed atomically in PostgreSQL with a bounded lease and claim token. Multiple FlagStack replicas can run the scheduler simultaneously without intentionally executing the same scheduled change twice.
+Due work is claimed atomically in PostgreSQL with a bounded lease and claim token. Multiple Switch On Your Code replicas can run the scheduler simultaneously without intentionally executing the same scheduled change twice.
 
 When a scheduled change commits, it uses the same SDK invalidation path as an interactive dashboard change.

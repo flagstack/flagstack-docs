@@ -1,6 +1,6 @@
 # Core development
 
-The core repository is [`flagstack/flagstack`](https://github.com/flagstack/flagstack).
+The core repository is [`switchonyourcode/switchonyourcode`](https://github.com/switchonyourcode/switchonyourcode).
 
 Its main directories are:
 
@@ -31,4 +31,4 @@ Run repository checks with:
 make check
 ```
 
-FlagStack uses a linear Git history. Pull requests are integrated by rebase only; merge commits and squash merges are not used. Organisation-wide contribution and CLA guidance lives in [`flagstack/.github`](https://github.com/flagstack/.github).
+Switch On Your Code uses a linear Git history. Pull requests are integrated by rebase only; merge commits and squash merges are not used. Organisation-wide contribution and CLA guidance lives in [`switchonyourcode/.github`](https://github.com/switchonyourcode/.github).

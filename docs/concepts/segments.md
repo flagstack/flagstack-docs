@@ -27,7 +27,7 @@ A flag rule then uses `in_segment` or `not_in_segment`.
 
 ## Nested segments
 
-Segments may reference other segments. FlagStack validates dependencies and rejects cycles before persistence. SDK evaluation also detects cycles and fails safely rather than recursing indefinitely.
+Segments may reference other segments. Switch On Your Code validates dependencies and rejects cycles before persistence. SDK evaluation also detects cycles and fails safely rather than recursing indefinitely.
 
 ## SDK delivery
 

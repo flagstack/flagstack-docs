@@ -1,12 +1,12 @@
 # Upgrades
 
-FlagStack database migrations are explicit. The API does not modify its schema automatically at startup.
+Switch On Your Code database migrations are explicit. The API does not modify its schema automatically at startup.
 
 A safe upgrade sequence is:
 
 1. back up PostgreSQL;
-2. pull or build the new FlagStack image;
-3. run `/app/flagstack-migrate` against the database;
+2. pull or build the new Switch On Your Code image;
+3. run `/app/switchonyourcode-migrate` against the database;
 4. start or roll the new application replicas;
 5. verify `/readyz` and the dashboard;
 6. verify application SDKs continue to refresh configuration.
